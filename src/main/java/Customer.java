@@ -1,3 +1,5 @@
+import Zamowienia.EmailException;
+
 public class Customer {
     private String name;
     private String surname;
@@ -44,5 +46,14 @@ public class Customer {
         this.surname = surname;
         this.age = age;
         this.email = email;
+    }
+    public void setEmail1(String email) throws EmailException {
+        if (!this.checkEmail(email)) {
+            throw new EmailException("Niepoprawny email");
+        }else {this.email = email;
+        }
+    }
+    public boolean checkEmail(String email){
+        return email.contains("@");
     }
 }

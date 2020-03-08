@@ -1,7 +1,7 @@
 public class Product {
    private String name;
    private double price;
-    private Category category;
+   private Category category;
 
     public String getName() {
         return name;
